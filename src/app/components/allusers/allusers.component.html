@@ -1,0 +1,24 @@
+<div class="wrapper">
+      <ul>
+  
+        <li style="list-style: none" *ngFor="let user of users;">
+          <div fxLayout="row" fxLayoutAlign="center center" *ngIf="user_check(user.username)">
+            <mat-card class="box" >
+              <b>{{ user.username }}</b>
+              <br />
+              Email : {{ user.email }}
+              <br />
+              First Name: {{user.firstName}}
+              <br />
+              Last Name: 
+              {{user.lastName}}
+              <br/>
+              Mobile Number: {{user.contactNumber}}
+            </mat-card>
+          </div>
+          <br *ngIf="user_check(user.username)"/>
+        </li>
+  
+      </ul>
+    </div>
+  
