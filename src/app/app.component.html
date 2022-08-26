@@ -1,19 +1,18 @@
 <div id="navbar">
     <mat-toolbar color="primary">
         <mat-toolbar-row >
-            <h1><a mat-button [routerLink]="'/dashboard'"> LOGO </a></h1>
+            <h1><a mat-button> LOGO </a></h1>
             <span class="menu-spacer"></span>
             <div>
                 <div *ngIf="logged_in; then thenBlock else elseBlock"></div>
-                <ng-template #thenBlock><a mat-button [routerLink]="'/dashboard'"> Dashboard </a></ng-template>
-                <ng-template #elseBlock><a mat-button [routerLink]="'/login'"> Login </a>
-                    <a mat-button [routerLink]="'/register'"> Register </a>
+                <ng-template #thenBlock><a mat-button [routerLink]="'/dashboard'" [class.selected]="selected=='dashboard'" (click)="selected='dashboard'"> Dashboard </a></ng-template>
+                <ng-template #elseBlock><a mat-button [routerLink]="'/login'" [class.selected]="selected=='login'" (click)="selected='login'"> Login </a>
+                    <a mat-button [routerLink]="'/register'" [class.selected]="selected=='register'" (click)="selected='register'"> Register </a>
                 </ng-template>
-                <a mat-button [routerLink]="'/tweets'"> Tweets </a>
-                <a mat-button [routerLink]="'/users'"> All Users </a>
+                <a mat-button [routerLink]="'/tweets'" [class.selected]="selected=='tweets'" (click)="selected='tweets'"> Tweets </a>
+                <a mat-button [routerLink]="'/users'" [class.selected]="selected=='users'" (click)="selected='users'"> All Users </a>
                 <div *ngIf="logged_in;then logoutBlock"></div>
                 <ng-template #logoutBlock><a mat-button (click)="logout()"> Logout </a></ng-template>
-                <!-- <a mat-button [routerLink]="'/create-activity'"> Create Activity </a> -->
             </div>
         </mat-toolbar-row>
     </mat-toolbar>
