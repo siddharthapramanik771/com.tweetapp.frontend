@@ -1,6 +1,7 @@
 <div class="wrapper">
+  <div class="example-button-container">
+    <button mat-raised-button color="warn" style="position: absolute;right: 5%;" (click)="user_search()">Search user by username</button>
       <ul>
-  
         <li style="list-style: none" *ngFor="let user of users;">
           <div fxLayout="row" fxLayoutAlign="center center" *ngIf="user_check(user.username)">
             <mat-card class="box" >

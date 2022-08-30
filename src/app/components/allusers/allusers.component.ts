@@ -24,5 +24,13 @@ export class AllusersComponent implements OnInit {
       return false
     }
   }
+  user_search(){
+    var username=prompt('write complete or partial username')
+    if(username!=null){
+      this.userservice.users_search(username).subscribe((data)=>{
+        this.users=data
+      })
+    }
+  }
 
 }

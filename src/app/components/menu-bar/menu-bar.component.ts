@@ -9,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class MenuBarComponent implements OnInit {
   public logged_in:boolean=false;
-  constructor(public userservice:UserService,public router:Router) { }
+  constructor(private userservice:UserService,private router:Router) { }
 
   ngOnInit(): void {
     var user=localStorage.getItem('user')

@@ -29,7 +29,8 @@ import { AllusersComponent } from './components/allusers/allusers.component';
     TweetListComponent,
     UserDetailsComponent,
     MenuBarComponent,
-    AllusersComponent
+    AllusersComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -43,7 +44,7 @@ import { AllusersComponent } from './components/allusers/allusers.component';
     MatIconModule,
     AngularMaterialModule,
     FlexLayoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   
   providers: [],

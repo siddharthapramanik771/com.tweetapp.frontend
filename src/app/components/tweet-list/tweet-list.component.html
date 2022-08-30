@@ -12,20 +12,42 @@
           <mat-card class="box">
             <b>{{ tweet.msg }}</b>
             <br />
-            posted  by {{ tweet.username }}
+            posted  by {{tweet.username==sharedservice.userkey?'You':tweet.username }}
             <br />
             likes: {{tweet.likes}}
             <br />
             <div *ngIf="logged_in && like_check(tweet.users_liked); then thenBlock else elseBlock"></div>
             <ng-template #thenBlock>
-              <h3 style="color: white; background-color:orange; width: min-content;" class="btn-block">Liked</h3>
+              <h3 style="color: white; background-color:rgb(249, 182, 57); width: min-content;" class="btn-block">Liked</h3>
             </ng-template>
             <ng-template #elseBlock><button mat-stroked-button color="accent" class="btn-block"
-                (click)="like_tweet(tweet.getId)" type="button">Like Tweet</button></ng-template>
+                (click)="like_tweet(tweet.getId)" type="button">Like Tweet</button> &nbsp;</ng-template>
+                <button mat-stroked-button color="accent" class="btn-block" (click)="get_reply(tweet.getId)"
+                type="button">Replys</button>
             <br />
             created on
-            {{tweet._id.creationTime}}
+            <i>{{tweet._id.creationTime}}</i>
+            <br/>
+            <mat-card style="border: 2px solid rgb(132, 228, 14);" *ngIf="check(tweet.getId)">
+              <button mat-stroked-button color="accent" class="btn-block" (click)="reply_tweet(tweet.getId)"
+                type="button">Post a reply</button>
+                <br/>
+                <br/>
+              <li style="list-style: none" *ngFor="let reply of replys[1];">
+              
+                <div fxLayout="row" fxLayoutAlign="center center">
+                  <mat-card class="box">
+                    <b>{{reply.msg}}</b>
+                    <br/>
+                    posted by {{reply.username}}
+                    <br/>
+                    <i>created on {{reply._id.creationTime}}</i>
 
+                    </mat-card>
+                </div>
+                <br *ngIf="check(tweet.getId)" />
+              </li>
+            </mat-card>
           </mat-card>
         </div>
         <br *ngIf="user_check(tweet.username)"/>

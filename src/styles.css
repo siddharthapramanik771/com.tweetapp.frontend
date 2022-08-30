@@ -31,6 +31,7 @@ body {
   opacity: 1;
   float: left;
   padding: 60px 50px 40px 50px;
+  border: 5px double rgb(68, 233, 145);
   width: 100%;
   background: #fff;
   border-radius: 10px;
@@ -118,12 +119,13 @@ body {
   filter: blur(1px);
 }
 .selected{
-  background-color: pink;
+  background-color: rgb(247, 243, 12);
 }
 .box1 {
   position: relative;
   top: 0;
   opacity: 1;
+  border: 2px solid rgb(104, 235, 17);
   float: left;
   padding: 60px 50px 40px 50px;
   width: min-content;
@@ -134,4 +136,7 @@ body {
   -ms-transform: scale(1);
   z-index: 5;
   max-width: 330px;
+}
+.btn-block{
+  color: rgb(76, 255, 106);
 }

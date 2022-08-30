@@ -12,7 +12,7 @@ export class AppComponent implements OnInit{
   title = 'com.tweetapp';
   public logged_in:boolean=false;
   public selected:string='';
-  constructor(public userservice:UserService,public router:Router,private sharedservice:SharedService) { }
+  constructor(private userservice:UserService,private router:Router,private sharedservice:SharedService) { }
   ngOnInit(): void {
     var user=this.sharedservice.userkey
     this.authenticate()

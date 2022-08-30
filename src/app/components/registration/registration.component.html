@@ -28,7 +28,7 @@
                 </mat-form-field>
             </mat-card-content>
             <mat-spinner *ngIf="running" color="accent" style="left: 30%;"></mat-spinner>
-            <button *ngIf="running ==false" mat-stroked-button color="accent" class="btn-block" type="button" (click)="register(firstname.value,lastname.value,email.value,number.value,username.value,password.value,confirm_password.value)">Register</button>
+            <button *ngIf="running ==false" mat-stroked-button class="btn-block" type="button" (click)="register(firstname.value,lastname.value,email.value,number.value,username.value,password.value,confirm_password.value)">Register</button>
         </form>
     </mat-card>
 </div>

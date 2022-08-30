@@ -1,1 +1,20 @@
-<p>user-details works!</p>
+<div class="other" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>User details</mat-card-title>
+      </mat-card-header>
+      <form class="example-form">
+        <mat-card-content>
+            username : {{userdata.username}}
+            <br/>
+            Name: {{userdata.firstName}} {{userdata.lastName}}
+            <br/>
+            Email: {{userdata.email}}
+            <br/>
+            Phone No: {{userdata.contactNumber}}
+
+        </mat-card-content>
+        <button mat-stroked-button class="btn-block" (click)="change_password()" type="button">Change Password</button>
+      </form>
+    </mat-card>
+  </div>

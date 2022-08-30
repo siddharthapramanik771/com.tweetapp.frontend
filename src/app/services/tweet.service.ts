@@ -10,7 +10,7 @@ import { SharedService } from './shared.service';
 })
 export class TweetService {
   private _url:string = '';
-  constructor(public http:HttpClient,private sharedservice:SharedService) {
+  constructor(private http:HttpClient,private sharedservice:SharedService) {
     this._url = this.sharedservice.base_url+'/api/v1.0/tweets/';
    }
   get_tweets_by_user(user:string){

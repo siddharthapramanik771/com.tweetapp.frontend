@@ -11,7 +11,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  constructor(public userservice:UserService,public router:Router,public appcomponent:AppComponent,private shareservice:SharedService) { }
+  constructor(private userservice:UserService,private router:Router,private appcomponent:AppComponent,private shareservice:SharedService) { }
   public running:boolean=false;
   ngOnInit(): void {
   }
