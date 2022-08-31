@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppComponent } from 'src/app/app.component';
 
 import { RegistrationComponent } from './registration.component';
 
@@ -8,7 +10,9 @@ describe('RegistrationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RegistrationComponent ]
+      imports:[HttpClientModule],
+      declarations: [ RegistrationComponent ],
+      providers:[AppComponent]
     })
     .compileComponents();
 

@@ -17,7 +17,6 @@ import {MatIconModule} from '@angular/material/icon';
 import { AngularMaterialModule } from './angular-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { AllusersComponent } from './components/allusers/allusers.component';
 
 @NgModule({
@@ -28,7 +27,6 @@ import { AllusersComponent } from './components/allusers/allusers.component';
     DashboardComponent,
     TweetListComponent,
     UserDetailsComponent,
-    MenuBarComponent,
     AllusersComponent,
     
   ],

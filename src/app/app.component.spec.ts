@@ -1,20 +1,25 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedService } from './services/shared.service';
+import { UserService } from './services/user.service';
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        HttpClientTestingModule,
-        HttpClientModule
+        HttpClientModule,
       ],
       declarations: [
-        AppComponent
+        AppComponent,
       ],
+      providers:[
+        SharedService,
+        UserService,
+      ]
     }).compileComponents();
   });
 
@@ -34,6 +39,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('com.tweetapp app is running!');
+    expect(compiled.querySelector('a')?.textContent).toContain('LOGO');
   });
 });

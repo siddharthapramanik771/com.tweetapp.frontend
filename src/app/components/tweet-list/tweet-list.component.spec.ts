@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppComponent } from 'src/app/app.component';
 
 import { TweetListComponent } from './tweet-list.component';
 
@@ -8,7 +10,9 @@ describe('TweetListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TweetListComponent ]
+      imports:[HttpClientModule],
+      declarations: [ TweetListComponent ],
+      providers:[AppComponent]
     })
     .compileComponents();
 

@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   public tweets:Tweet[]=[];
   public running:boolean=false;
   public replys:[string,Reply[]]=['',[]];
-  constructor(private tweetservice:TweetService,private sharedservice:SharedService,
+  constructor(private tweetservice:TweetService,public sharedservice:SharedService,
     private appcomponent:AppComponent,private replyservice:ReplyService,private router:Router) { }
 
   ngOnInit(): void {

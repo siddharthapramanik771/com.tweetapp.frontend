@@ -39,7 +39,7 @@
                   <mat-card class="box">
                     <b>{{reply.msg}}</b>
                     <br/>
-                    posted by {{reply.username}}
+                    posted by {{reply.username==sharedservice.userkey?'You':reply.username }}
                     <br/>
                     <i>created on {{reply._id.creationTime}}</i>
 
