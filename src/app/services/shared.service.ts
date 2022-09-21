@@ -8,7 +8,7 @@ import { User } from '../models/user';
 })
 export class SharedService {
   public userkey:string='';
-  public readonly base_url:string="https://p2axjjncmj.execute-api.ap-south-1.amazonaws.com/prod"
+  public readonly base_url:string="api url"
   public userdata:User=new User();
   constructor() { }
 
